@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+/*eslint-disable*/
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+import Layout from "./Layout";
+import Header from "./Header";
+import List from "./List";
+import Body from "./Body";
+import Write from "./write";
+import { useSelector, } from "react-redux/es/exports";
+import Weather from "./Weather";
+
 
 function App() {
+  let toggle = useSelector((state) => { return state.toggle } )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <Layout>
+        <Header />
+        {toggle ? <Write /> : <List />}
+        <Weather></Weather>
+      </Layout>
+
   );
 }
-
 export default App;
+

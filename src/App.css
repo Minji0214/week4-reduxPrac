@@ -1,38 +1,64 @@
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.layoutdiv {
+  max-width: 23rem;
+  max-height: 60rem;
+  border-color: #c60055;
+  border-style: inset;
+  display:flex;
+  flex-direction: column;
 }
+.header{
+  border-style: inset;
+  color: aliceblue;
+  background-color:#c60055;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.header-logo{
+  margin-left: 5px;
+}
+.header-btn{
+all:unset;
+  margin-right: 5px;
+ border-style: ridge;
+ border-radius: 5px;
+  border-color: #b6b8c3;
+  color: azure;
+  padding: 3px
+  
+}
+.header-btn:hover{
+ margin-right: 5px;
+   border-style: ridge;
+   border-radius: 5px;
+    border-color: #b6b8c3;
+    color: azure;
+    padding: 3px;
+    background-color:#ff79b0;
+    
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.memobox{
+  background-color: #ff4081;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.memobox-memo{
+  background-color: #ff79b0;
+  border-radius: 5px;
+  width: 80%;
+  margin: 5px 0 5px 0 ;
+  color: whitesmoke
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputBox{
+  width: 90%;
+  height: 10rem;
 }
